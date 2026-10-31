@@ -1,0 +1,16 @@
+== check_decode.py aircraft-final.json ==
+PASS  aircraft 1 present (hex abc123)
+PASS  callsign FICT1
+PASS  altitude 10200 == 10200
+PASS  lat 33.071501 ~ 33.071481
+PASS  lon -96.785291 ~ -96.785282
+PASS  ground speed 399.0 ~ 399.0
+PASS  track 94.02 ~ 94.0
+PASS  aircraft 2 present (hex def456)
+PASS  callsign TEST2
+PASS  altitude 0 == 0
+PASS  lat 33.099991 ~ 33.100000
+PASS  lon -96.899975 ~ -96.900000
+PASS  no ground speed (none was sent)
+
+ALL CHECKS PASSED (13/13)

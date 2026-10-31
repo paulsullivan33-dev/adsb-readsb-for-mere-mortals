@@ -1,0 +1,10 @@
+== make_fixture.py file fixture.beast ==
+wrote 125 messages to fixture.beast (2876 bytes)
+
+First 96 bytes (Beast frames: 1a 33 <6-byte clock> <signal> <14-byte message>):
+0000000 1a 33 00 00 00 00 00 00 80 8d ab c1 23 10 18 90
+0000016 d4 c6 08 20 6f 43 cb 1a 33 00 00 00 1b 77 40 80
+0000032 8d de f4 56 10 50 54 d4 ca 08 20 3c 95 c8 1a 33
+0000048 00 00 00 36 ee 80 80 8d ab c1 23 10 18 90 d4 c6
+0000064 08 20 6f 43 cb 1a 33 00 00 00 52 65 c0 80 8d de
+0000080 f4 56 10 50 54 d4 ca 08 20 3c 95 c8 1a 33 00 00

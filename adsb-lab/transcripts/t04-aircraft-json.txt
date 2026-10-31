@@ -1,0 +1,63 @@
+== aircraft.json as written by readsb at the end of the run ==
+(pretty-printed; the file itself is one line of JSON)
+{
+    "now": 1793413984.0,
+    "messages": 364,
+    "aircraft": [
+        {
+            "hex": "def456",
+            "type": "adsb_icao",
+            "flight": "TEST2   ",
+            "alt_baro": 0,
+            "calc_track": 303,
+            "category": "C0",
+            "lat": 33.099991,
+            "lon": -96.899975,
+            "nic": 8,
+            "rc": 186,
+            "seen_pos": 0.88,
+            "r_dst": 7.833,
+            "r_dir": 40.0,
+            "version": 0,
+            "nac_p": 8,
+            "sil": 2,
+            "sil_type": "unknown",
+            "alert": 0,
+            "spi": 0,
+            "mlat": [],
+            "tisb": [],
+            "messages": 57,
+            "seen": 0.9,
+            "rssi": -6.0
+        },
+        {
+            "hex": "abc123",
+            "type": "adsb_icao",
+            "flight": "FICT1   ",
+            "alt_baro": 10200,
+            "gs": 399.0,
+            "track": 94.02,
+            "geom_rate": 0,
+            "category": "C0",
+            "lat": 33.071501,
+            "lon": -96.785291,
+            "nic": 8,
+            "rc": 186,
+            "seen_pos": 2.342,
+            "r_dst": 11.608,
+            "r_dir": 68.3,
+            "version": 0,
+            "nac_p": 8,
+            "nac_v": 0,
+            "sil": 2,
+            "sil_type": "unknown",
+            "alert": 0,
+            "spi": 0,
+            "mlat": [],
+            "tisb": [],
+            "messages": 171,
+            "seen": 1.0,
+            "rssi": -6.0
+        }
+    ]
+}

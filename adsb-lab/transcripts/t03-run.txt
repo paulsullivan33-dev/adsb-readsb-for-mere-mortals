@@ -1,0 +1,124 @@
+== readsb consuming the fixture feed (excerpts from the full log) ==
+Command: ./readsb --net --net-only --net-connector 127.0.0.1,18112,beast_in \
+           --write-json <lab>/json --write-json-every 1 --lat 33.0 --lon -97.0 \
+           --no-interactive --stats-every 10
+The fixture server (make_fixture.py serve 18112) was already listening.
+Excerpted: startup, the first identification decode, the first position
+pair (watch the CPR line change), the first velocity decode. [...] marks cuts.
+
+invoked by: ./readsb --net --net-only --net-connector 127.0.0.1,18112,beast_in --write-json /home/hatch/workspace/adsb-labwork/run/json --write-json-every 1 --lat 33.0 --lon -97.0 --no-interactive --stats-every 10
+[2026-10-31 02:31:55.367 UTC] readsb starting up.
+readsb version: 3.16.20 wiedehopf git: v3.16.20-17-g90ece6f (committed: Fri Oct 30 23:47:05 2026 0100)
+Using lat: 33.000000, lon: -97.000000 (location accuracy: exact)
+Beast TCP input: Connection established: 127.0.0.1 port 18112
+*8dabc123101890d4c608206f43cb;
+hex:  abc123   CRC: 000000 fixed bits: 0 decode: ok
+RSSI:     -6.0 dBFS   reduce_forward: 1
+receiverId: ef601cd3-739b-4387
+receiverTime:                   150000.00us
+utcTime: 02:31:55.537 epoch: 1793413915.537
+DF: 17 AA:ABC123 CA:5 ME:101890D4C60820
+[...]
+hex:  abc123   CRC: 000000 fixed bits: 0 decode: ok
+RSSI:     -6.0 dBFS   reduce_forward: 1
+receiverId: ef601cd3-739b-4387
+receiverTime:                   750000.00us
+utcTime: 02:31:55.818 epoch: 1793413915.818
+DF: 17 AA:ABC123 CA:5 ME:58378200010E39
+ Extended Squitter Airborne position (barometric altitude) (11)
+  ICAO Address:  ABC123 (adsb_icao)
+  Air/Ground:    airborne
+  Baro altitude:              10000 ft
+  CPR type:      Airborne
+  CPR odd flag:  even
+  CPR latitude:  (65536)
+  CPR longitude: (69177)
+  CPR decoding:  none
+  NIC-B:         0
+  NACp:          8
+  SIL:           2 (p <= 0.001%, unknown type)
+
+*8dabc12399011c23802400cc7047;
+hex:  abc123   CRC: 000000 fixed bits: 0 decode: ok
+RSSI:     -6.0 dBFS   reduce_forward: 1
+receiverId: ef601cd3-739b-4387
+receiverTime:                   900000.00us
+utcTime: 02:31:55.840 epoch: 1793413915.840
+DF: 17 AA:ABC123 CA:5 ME:99011C23802400
+ Extended Squitter Airborne velocity over ground, subsonic (19/1)
+  ICAO Address:  ABC123 (adsb_icao)
+  Air/Ground:    airborne
+  Ground track       45.0
+  Groundspeed:   400.2 kt
+  Geom rate:        512 ft/min
+  NACv:          0
+
+*8dabc123583785a223982e540813;
+hex:  abc123   CRC: 000000 fixed bits: 0 decode: ok
+RSSI:     -6.0 dBFS   reduce_forward: 1
+receiverId: ef601cd3-739b-4387
+receiverTime:                  1050000.00us
+utcTime: 02:31:55.866 epoch: 1793413915.866
+DF: 17 AA:ABC123 CA:5 ME:583785A223982E
+ Extended Squitter Airborne position (barometric altitude) (11)
+  ICAO Address:  ABC123 (adsb_icao)
+  Air/Ground:    airborne
+  Baro altitude:              10000 ft
+  CPR type:      Airborne
+  CPR odd flag:  odd
+  CPR latitude:    32.999997 (53521)
+  CPR longitude:  -96.999973 (104494)
+  CPR decoding:  global
+  NIC:           8
+  Rc:            0.186 km / 0.1 NM
+  NIC-B:         0
+  NACp:          8
+  SIL:           2 (p <= 0.001%, unknown type)
+
+*8ddef45658058211131555868c59;
+hex:  def456   CRC: 000000 fixed bits: 0 decode: ok
+RSSI:     -6.0 dBFS   reduce_forward: 1
+receiverId: ef601cd3-739b-4387
+receiverTime:                  1200000.00us
+utcTime: 02:31:55.890 epoch: 1793413915.890
+DF: 17 AA:DEF456 CA:5 ME:58058211131555
+ Extended Squitter Airborne position (barometric altitude) (11)
+  ICAO Address:  DEF456 (adsb_icao)
+  Air/Ground:    airborne
+[... 300 message decodes in total ...]
+
+Statistics: Sat Oct 31 02:31:55 2026 UTC - Sat Oct 31 02:33:04 2026 UTC
+Network:
+  0.008718 MBytes received
+  0.000000 MBytes sent
+Messages from network clients:
+  0 Mode A/C messages received
+  0 Mode A/C messages received
+  369 Mode S messages received
+    0 with bad message format or invalid CRC
+    0 with unrecognized ICAO address
+    369 accepted with correct CRC
+    0 accepted with 1-bit error repaired
+369 total usable messages
+0 surface position messages received
+291 airborne position messages received
+289 global CPR attempts with valid positions
+0 global CPR attempts with bad data
+  0 global CPR attempts that failed the range check
+  0 global CPR attempts that failed the speed check
+0 global CPR attempts with insufficient data
+0 local CPR attempts with valid positions
+  0 aircraft-relative positions
+  0 receiver-relative positions
+2 local CPR attempts that did not produce useful positions
+  0 local CPR attempts that failed the range check
+  0 local CPR attempts that failed the speed check
+0 CPR messages that look like transponder failures filtered
+0 non-ES altitude messages from ES-equipped aircraft ignored
+2 unique aircraft tracks
+0 aircraft tracks where only one message was seen
+CPU load: 0.1%
+  0 ms for demodulation
+  0 ms for reading from USB
+  66 ms for network input and background tasks
+[2026-10-31 02:33:04.995 UTC] Normal exit. uptime:  0d  0h  1m 9.628s
